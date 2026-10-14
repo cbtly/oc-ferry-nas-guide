@@ -15,6 +15,7 @@
 - [5. Advanced](#5-advanced)
 - [6. Reference](#6-reference)
 - [7. Compatibility](#7-compatibility)
+- [8. Acknowledgments](#8-acknowledgments)
 
 ---
 
@@ -397,6 +398,33 @@ curl -s http://192.168.31.53:41980/v1/models \
   -H "Authorization: Bearer YOUR_API_KEY" | python3 -m json.tool
 ```
 
+### 5.4 Proxy and Node Selection
+
+OC Ferry needs internet access to reach OpenCode's upstream. Two proxy approaches:
+
+**Option 1: Router transparent proxy (recommended)**
+
+If your router runs a transparent proxy (e.g., ShellClash), the NAS's outbound traffic goes through it automatically — **no configuration needed** on the OC Ferry side. Leave the "Use system proxy" toggle in the WebUI off.
+
+**Option 2: System proxy**
+
+Without a router proxy, enable "Use system proxy" in the WebUI and OC Ferry will read the system environment variables (`HTTP_PROXY` / `HTTPS_PROXY`). Add to the systemd unit:
+
+```ini
+Environment=HTTP_PROXY=http://192.168.31.1:7890
+Environment=HTTPS_PROXY=http://192.168.31.1:7890
+```
+
+**Node selection (important):**
+
+Some models are region-restricted. For example, `opencode/muse-spark-1.3-contributor-free` on Hong Kong nodes returns:
+
+```
+This model is not available in your country
+```
+
+Fix: switch the relevant domains to **Japan, Taiwan, or US** nodes in your proxy tool, avoiding Hong Kong. This is a proxy-side configuration, unrelated to OC Ferry.
+
 ---
 
 ## 6. Reference
@@ -480,6 +508,15 @@ Only three core requirements: **Linux kernel + Node v22 + a way to keep the proc
 ### 7.3 Model Count Note
 
 The "9 free models" mentioned was the count measured on 2026-10-15. OpenCode's free model catalog changes over time (additions, removals, renames) — always check `/v1/models` for the current list rather than expecting the number to match.
+
+---
+
+## 8. Acknowledgments
+
+This guide is based on the [OC Ferry](https://github.com/HRuiCcc/RuiC-oc-ferry) project. Thanks to [HRuiCcc](https://github.com/HRuiCcc) for the open-source contribution.
+
+- Original repo: https://github.com/HRuiCcc/RuiC-oc-ferry
+- Upstream dependency: [OpenCode](https://github.com/sst/opencode)
 
 ---
 
