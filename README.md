@@ -1,1 +1,478 @@
-IyBPQyBGZXJyeSBOQVMg5a6e5oiY77ya5LuO5rqQ56CB5YiwIDI0IOWwj+aXtuWcqOe6vwoKPiDlrp7miJjorrDlvZXvvJoyMDI2IOW5tCAxMCDmnIggMTUg5pel77yMT0MgRmVycnkgMC4zLjAg5LuOIFdpbmRvd3Mg6L+B56e75YiwIE5BU++8iEozMTYwIC8gZm5PU++8ie+8jHN5c3RlbWQg5bi46am76L+Q6KGM77yMOSDkuKrlhY3otLnmqKHlnovlhajpg6jlj6/nlKjvvIzoh6rnoJTkuK3mlocgV2ViVUkg5LiK57q/44CCCgotLS0KCiMjIOebruW9lQoKLSBbMS4g566A5LuLXSgjMS3nroDku4spCi0gWzIuIOeOr+Wig+WHhuWkh10oIzIt546v5aKD5YeG5aSHKQotIFszLiDov4Hnp7vmraXpqqRdKCMzLei/geenu+atpemqpCkKLSBbNC4g6YG/5Z2R5oyH5Y2XXSgjNC3pgb/lnZHmjIfljZcpCi0gWzUuIOi/m+mYtl0oIzUt6L+b6Zi2KQotIFs2LiDlj4LogINdKCM2LeWPguiAgykKCi0tLQoKIyMgMS4g566A5LuLCgojIyMgT0MgRmVycnkg5piv5LuA5LmICgpPQyBGZXJyeSDmmK/kuIDkuKrmoaXmjqXmnI3liqHvvIzmioogW09wZW5Db2RlXShodHRwczovL2dpdGh1Yi5jb20vc3N0L29wZW5jb2RlKSDnmoTlhY3otLnmqKHlnovpgJrov4cgT3BlbkFJIOWFvOWuueeahCBBUEkg5pq06Zyy5Ye65p2l44CC5Lu75L2V5pSv5oyB6Ieq5a6a5LmJIGJhc2UgVVJMIOeahOWuouaIt+err++8iFdvcmtCdWRkeeOAgUhlcm1lc+OAgUNvZGV4IOetie+8iemDveWPr+S7peaOpeWFpeS9v+eUqOOAggoK5qC45b+D6IO95Yqb77yaCgotIE9wZW5BSSDlhbzlrrnnmoQgYC92MWAg6L2s5Y+R5o6l5Y+j77yIY2hhdCBjb21wbGV0aW9uc++8iQotIOWQr+WKqOaXtuiHquWKqOaOoua1i+aooeWei+WPr+eUqOaAp++8iOWQq+W3peWFt+iwg+eUqOiDveWKm++8iQotIEFQSSBLZXkg6Ym05p2DCi0g6Ieq56CU5Lit5paHIFdlYlVJ77yIYC91aWDvvInvvJrnirbmgIHnm5HmjqfjgIHmqKHlnovliJfooajjgIHkuIDplK7mo4DmtYvjgIHku6PnkIblvIDlhbMKCiMjIyDkuLrku4DkuYjmkKzliLAgTkFTCgp8IOWcuuaZryB8IFdpbmRvd3Mg6LeRIHwgTkFTIOi3kSB8CnwtLS0tLS18LS0tLS0tLS0tLS18LS0tLS0tLS18Cnwg5byA5py66KaB5rGCIHwg55S16ISR5b+F6aG75byA552AIHwgN3gyNCDluLjlubTlnKjnur8gfAp8IOWxgOWfn+e9keiuv+mXriB8IOeUteiEkeS8keecoOWwseaWrSB8IOmaj+aXtuWPr+eUqCB8Cnwg5aSa6K6+5aSH5YWx5LqrIHwg5b6X6YCQ5Y+w6YWN572uIHwg5LiA5Liq5Zyw5Z2A5YWo5a6255SoIHwKfCDlip/ogJcgfCDlh6DljYHnk6YgfCBKMzE2MCDljYHlh6Dnk6YgfAoK5LiA5Y+l6K+d77yaTkFTIOeJiOaYr+S4gOasoemDqOe9suOAgemVv+acn+WPl+ebiuOAguaJi+acuuOAgeeUteiEkeOAgeW5s+adv++8jOWxgOWfn+e9keWGheS7u+S9leiuvuWkh+Whq+S4gOS4quWcsOWdgOWwseiDveeUqOOAggoKLS0tCgojIyAyLiDnjq/looPlh4blpIcKCiMjIyAyLjEgTkFTIOimgeaxggoKLSDog70gU1NIIOeZu+W9le+8iHJvb3Qg5oiW5pyJIHN1ZG8g5p2D6ZmQ55qE55So5oi377yJCi0g5pyJIHN5c3RlbWTvvIhmbk9TIC8gRGViaWFuIC8gVWJ1bnR1IOezu+mDveiHquW4pu+8iQotIOiHs+WwkSAyR0Ig5Y+v55So56OB55uY56m66Ze077yI5ZCrIE9wZW5Db2RlIOS6jOi/m+WItue6piAxMDBNQiArIE5vZGUg6L+Q6KGM5pe277yJCgrmnKzmrKHlrp7miJjnjq/looPvvJoKCmBgYArorr7lpIfvvJpKMzE2MCDlsI/kuLvmnLrvvIg0R0Ig5YaF5a2Y77yJCuezu+e7n++8mmZuT1MK5Li75py65ZCN77yaaGl5b3JpCklQ77yaMTkyLjE2OC4zMS41Mwrpg6jnvbLnm67lvZXvvJovdm9sMS8xMDAwL29jLWZlcnJ5CuaVsOaNruebruW9le+8mi92b2wxLzEwMDAvb2MtZmVycnkvZGF0YQrmnI3liqHnq6/lj6PvvJo0MTk4MApgYGAKCiMjIyAyLjIgTm9kZS5qcyB2MjIr77yI5YWz6ZSu77yJCgoqKui/meaYr+acgOmHjeimgeeahOWJjee9ruadoeS7tuOAgioqIE5BUyDoh6rluKbnmoQgTm9kZSDlvoDlvoDmmK8gdjE477yMT0MgRmVycnkg5L6d6LWW55qEIGB1bmRpY2lgIOWcqCBOb2RlIDE4IOS4i+WKoOi9veWksei0pe+8jOacjeWKoeS8muebtOaOpemAgOWHuu+8iOivpuingVvpgb/lnZHmjIfljZddKCM0MS1ub2RlLTE4LXZzLTIyKe+8ieOAggoK5qOA5p+l5b2T5YmN54mI5pys77yaCgpgYGBiYXNoCm5vZGUgLXYKIyDlpoLmnpzovpPlh7ogdjE4LnjvvIzlv4XpobvljYfnuqcKYGBgCgrlronoo4UgTm9kZSB2MjIg5LqM6L+b5Yi254mI77yI5LulIHg2NCDkuLrkvovvvIxBUk0g5py65Z6L6K+35LiL6L295a+55bqU55qEIGFybTY0IOWMhe+8ie+8mgoKYGBgYmFzaApjZCAvdG1wCmN1cmwgLXNMIGh0dHBzOi8vbm9kZWpzLm9yZy9kaXN0L3YyMi4yMi4wL25vZGUtdjIyLjIyLjAtbGludXgteDY0LnRhci54eiAtbyBub2RlLnRhci54egp0YXIgLXhmIG5vZGUudGFyLnh6CmNwIC1yIG5vZGUtdjIyLjIyLjAtbGludXgteDY0L2Jpbi8qIC91c3IvbG9jYWwvYmluLwpjcCAtciBub2RlLXYyMi4yMi4wLWxpbnV4LXg2NC9saWIvKiAvdXNyL2xvY2FsL2xpYi8gMj4vZGV2L251bGwKY3AgLXIgbm9kZS12MjIuMjIuMC1saW51eC14NjQvaW5jbHVkZS8qIC91c3IvbG9jYWwvaW5jbHVkZS8gMj4vZGV2L251bGwKY3AgLXIgbm9kZS12MjIuMjIuMC1saW51eC14NjQvc2hhcmUvKiAvdXNyL2xvY2FsL3NoYXJlLyAyPi9kZXYvbnVsbAovdXNyL2xvY2FsL2Jpbi9ub2RlIC12CiMg5bqU6L6T5Ye6IHYyMi4yMi4wCmBgYAoKPiDms6jmhI/vvJrkuI3opoHopobnm5bns7vnu5/oh6rluKbnmoQgYC91c3IvYmluL25vZGVg77yM5oqKIHYyMiDoo4XliLAgYC91c3IvbG9jYWxgIOWNs+WPr+OAgmAvdXNyL2xvY2FsL2JpbmAg5ZyoIFBBVEgg5Lit55qE5LyY5YWI57qn6auY5LqOIGAvdXNyL2JpbmDvvIzkuJQgc3lzdGVtZCDmnI3liqHph4zmiJHku6zkvJrlhpnnu53lr7not6/lvoTjgIIKCiMjIyAyLjMg5rqQ56CB5YeG5aSH77yI5Zyo5byA5Y+R5py65LiK77yJCgrlgYforr7kvaDlt7Lnu4/mnInkuIDku73og73ot5HnmoQgT0MgRmVycnkg5rqQ56CB77yI5ZCrIGBub2RlX21vZHVsZXNgIOW3suWuieijhe+8ie+8mgoKYGBgYmFzaApjZCB+L3dvcmtzcGFjZS9vYy1mZXJyeS1idWlsZAp0YXIgLS1leGNsdWRlPSdSdWlDLW9jLWZlcnJ5L25vZGVfbW9kdWxlcycgXAogICAgLS1leGNsdWRlPSdSdWlDLW9jLWZlcnJ5L3JlbGVhc2UnIFwKICAgIC0tZXhjbHVkZT0nUnVpQy1vYy1mZXJyeS8uZ2l0JyBcCiAgICAtY3pmIG9jLWZlcnJ5LW5hcy50YXIuZ3ogUnVpQy1vYy1mZXJyeQpscyAtbGggb2MtZmVycnktbmFzLnRhci5negojIOe6piAzLTdNQu+8iOS4jeWQqyBub2RlX21vZHVsZXPvvIkKYGBgCgo+IGBub2RlX21vZHVsZXNgIOS4jeaJk+WMhe+8jOWIsCBOQVMg5LiK6YeN5pawIGBucG0gaW5zdGFsbCAtLXByb2R1Y3Rpb25g77yM6YG/5YWN5p625p6E5LiN5LiA6Ie077yI5q+U5aaC5byA5Y+R5py65pivIFdpbmRvd3PvvIxOQVMg5pivIExpbnV477yJ44CCCgotLS0KCiMjIDMuIOi/geenu+atpemqpAoKIyMjIDMuMSDkvKDovpPliLAgTkFTCgrnlKjkvaDpobrmiYvnmoTmlrnlvI/kvKDkuIrljrvvvIhzY3DjgIFyc3luY+OAgee9keebmOOAgWNhdGJveCDnrYnvvInvvJoKCmBgYGJhc2gKIyDnpLrkvovvvJpzY3AKc2NwIG9jLWZlcnJ5LW5hcy50YXIuZ3ogcm9vdEAxOTIuMTY4LjMxLjUzOi92b2wxLzEwMDAvb2MtZmVycnkvCmBgYAoKIyMjIDMuMiDop6Pljovlubblronoo4Xkvp3otZYKCmBgYGJhc2gKc3NoIHJvb3RAMTkyLjE2OC4zMS41Mwpta2RpciAtcCAvdm9sMS8xMDAwL29jLWZlcnJ5CmNkIC92b2wxLzEwMDAvb2MtZmVycnkKdGFyIC14emYgb2MtZmVycnktbmFzLnRhci5negpjZCBSdWlDLW9jLWZlcnJ5Cm5wbSBpbnN0YWxsIC0tcHJvZHVjdGlvbgpgYGAKCiMjIyAzLjMg5Yib5bu6IHN5c3RlbWQg5pyN5YqhCgpgYGBiYXNoCmNhdCA+IC9ldGMvc3lzdGVtZC9zeXN0ZW0vb2MtZmVycnkuc2VydmljZSA8PCAnRU9GJwpbVW5pdF0KRGVzY3JpcHRpb249T0MgRmVycnkgLSBPcGVuQ29kZSBmcmVlIG1vZGVscyBicmlkZ2UKQWZ0ZXI9bmV0d29yay1vbmxpbmUudGFyZ2V0CldhbnRzPW5ldHdvcmstb25saW5lLnRhcmdldAoKW1NlcnZpY2VdClR5cGU9c2ltcGxlClVzZXI9cm9vdApXb3JraW5nRGlyZWN0b3J5PS92b2wxLzEwMDAvb2MtZmVycnkvUnVpQy1vYy1mZXJyeQpFbnZpcm9ubWVudD1GRVJSWV9IT1NUPTAuMC4wLjAKRW52aXJvbm1lbnQ9RkVSUllfUE9SVD00MTk4MApFbnZpcm9ubWVudD1GRVJSWV9EQVRBX0RJUj0vdm9sMS8xMDAwL29jLWZlcnJ5L2RhdGEKRW52aXJvbm1lbnQ9RkVSUllfTk9fU1lOQz0xCkV4ZWNTdGFydD0vdXNyL2xvY2FsL2Jpbi9ub2RlIHNyYy9tYWluLmpzClJlc3RhcnQ9YWx3YXlzClJlc3RhcnRTZWM9MTAKCltJbnN0YWxsXQpXYW50ZWRCeT1tdWx0aS11c2VyLnRhcmdldApFT0YKYGBgCgrlhbPplK7phY3nva7or7TmmI7vvJoKCnwg6YWN572u6aG5IHwg5L2c55SoIHwKfC0tLS0tLS0tfC0tLS0tLXwKfCBgRkVSUllfSE9TVD0wLjAuMC4wYCB8IOebkeWQrOaJgOaciee9keWNoe+8jOWxgOWfn+e9keWPr+iuv+mXru+8iOm7mOiupCAxMjcuMC4wLjEg5Y+q6IO95pys5py677yJIHwKfCBgRkVSUllfUE9SVD00MTk4MGAgfCDmnI3liqHnq6/lj6MgfAp8IGBGRVJSWV9EQVRBX0RJUmAgfCDmlbDmja7nm67lvZXvvIhBUEkgS2V544CB5qih5Z6L5o6i5rWL57yT5a2Y6YO95pS+6L+Z6YeM77yJIHwKfCBgRkVSUllfTk9fU1lOQz0xYCB8IOi3s+i/hyBXb3JrQnVkZHkg5ZCM5q2l77yITkFTIOS4iuS4jemcgOimge+8iSB8CnwgYEV4ZWNTdGFydD0vdXNyL2xvY2FsL2Jpbi9ub2RlYCB8ICoq5b+F6aG75oyH5ZCRIE5vZGUgdjIyKirvvIzkuI3og73nlKjns7vnu5/oh6rluKbnmoQgdjE4IHwKfCBgUmVzdGFydD1hbHdheXNgIHwg5bSp5rqD6Ieq5Yqo6YeN5ZCvIHwKCiMjIyAzLjQg5ZCv5Yqo5pyN5YqhCgpgYGBiYXNoCnN5c3RlbWN0bCBkYWVtb24tcmVsb2FkCnN5c3RlbWN0bCBlbmFibGUgb2MtZmVycnkKc3lzdGVtY3RsIHN0YXJ0IG9jLWZlcnJ5CnNsZWVwIDEwCnN5c3RlbWN0bCBzdGF0dXMgb2MtZmVycnkgLS1uby1wYWdlciB8IGhlYWQgLTEyCmBgYAoK5q2j5bi45bqU55yL5YiwIGBBY3RpdmU6IGFjdGl2ZSAocnVubmluZylg44CCCgojIyMgMy41IOehruiupOWQr+WKqOWujOaIkAoK6aaW5qyh5ZCv5Yqo5Lya6Ieq5Yqo5LiL6L29IE9wZW5Db2RlIOS6jOi/m+WItu+8jOmcgOimgeWHoOWIhumSn+OAgueci+aXpeW/l+ehruiupO+8mgoKYGBgYmFzaApqb3VybmFsY3RsIC11IG9jLWZlcnJ5IC0tbm8tcGFnZXIgfCBncmVwIC1pICJyZWFkeVx8b3BlbmNvZGUiIHwgdGFpbCAtNQpgYGAKCueci+WIsOexu+S8vOS4i+mdoueahOi+k+WHuuWwseaYr+Wwsee7quS6hu+8mgoKYGBgCk9DIEZlcnJ5IHJlYWR5IGF0IGh0dHA6Ly8xMjcuMC4wLjE6NDE5ODAvdjE7IDkgZnJlZSBtb2RlbHM7IHByb2JlIGNhY2hlIGhpdCAwLCBwcm9iaW5nIDkKYGBgCgrkuZ/lj6/ku6Xnm7TmjqXmn6XlgaXlurfmo4Dmn6XmjqXlj6PvvJoKCmBgYGJhc2gKY3VybCAtcyBodHRwOi8vMTI3LjAuMC4xOjQxOTgwL2hlYWx0aCBcCiAgLUggIkF1dGhvcml6YXRpb246IEJlYXJlciAkKGNhdCAvdm9sMS8xMDAwL29jLWZlcnJ5L2RhdGEvYXBpLWtleSkiIHwgaGVhZCAtYyAzMDAKYGBgCgpgcGhhc2VgIOS4uiBgcmVhZHlgIOWNs+ato+W4uOOAggoKIyMjIDMuNiDojrflj5YgQVBJIEtleSDlubbmiZPlvIAgV2ViVUkKCmBgYGJhc2gKY2F0IC92b2wxLzEwMDAvb2MtZmVycnkvZGF0YS9hcGkta2V5CmBgYAoK5aSN5Yi26L6T5Ye655qE5a+G6ZKl77yM5Zyo5rWP6KeI5Zmo5omT5byA77yaCgpgYGAKaHR0cDovLzE5Mi4xNjguMzEuNTM6NDE5ODAvdWkKYGBgCgrnspjotLTlr4bpkqXlkI7vvIzlj6/ku6XnnIvliLDmqKHlnovliJfooajjgIHpgJDkuKrmo4DmtYvnirbmgIHjgIHkuIDplK7ph43mlrDmo4DmtYvjgIHns7vnu5/ku6PnkIblvIDlhbPnrYnjgIIKCui9rOWPkeaOpeWPo+WcsOWdgO+8iOe7meWuouaIt+err+eUqO+8ie+8mgoKYGBgCmh0dHA6Ly8xOTIuMTY4LjMxLjUzOjQxOTgwL3YxCmBgYAoKLS0tCgojIyA0LiDpgb/lnZHmjIfljZcKCiMjIyA0LjEgTm9kZSAxOCB2cyAyMgoKKirnjrDosaHvvJoqKgoKYGBgYmFzaApqb3VybmFsY3RsIC11IG9jLWZlcnJ5IC0tbm8tcGFnZXIgfCB0YWlsIC0yMAojIOeci+WIsCB1bmRpY2kg5Yqg6L295aSx6LSl77yMTm9kZS5qcyB2MTguMjAuNO+8jOacjeWKoeeKtuaAgSAxL0ZBSUxVUkUKYGBgCgoqKuagueWboO+8mioqCgpOQVMg57O757uf6Ieq5bim55qEIE5vZGUg5pivIHYxOO+8jE9DIEZlcnJ5IOS+nei1lueahCBgdW5kaWNpYCDlupPlnKggTm9kZSAxOCDkuIvml6Dms5XliqDovb3jgILmnI3liqHlkK/liqjljbPltKnmuoPvvIxzeXN0ZW1kIOWPjeWkjemHjeWQr+S5n+aXoOa1juS6juS6i+OAggoKKirop6Pms5XvvJoqKgoK5oyJIFsyLjJdKCMyMi1ub2RlanMtdjIy5YWz6ZSuKSDlronoo4UgTm9kZSB2MjIg5YiwIGAvdXNyL2xvY2FsYO+8jOW5tuehruS/nSBzZXJ2aWNlIOaWh+S7tueahCBgRXhlY1N0YXJ0YCDlhpnnmoTmmK/nu53lr7not6/lvoTvvJoKCmBgYGluaQojIOmUmeivrwpFeGVjU3RhcnQ9L3Vzci9iaW4vbm9kZSBzcmMvbWFpbi5qcwojIOato+ehrgpFeGVjU3RhcnQ9L3Vzci9sb2NhbC9iaW4vbm9kZSBzcmMvbWFpbi5qcwpgYGAKCumqjOivge+8mgoKYGBgYmFzaApncmVwIEV4ZWNTdGFydCAvZXRjL3N5c3RlbWQvc3lzdGVtL29jLWZlcnJ5LnNlcnZpY2UKL3Vzci9sb2NhbC9iaW4vbm9kZSAtdiAgICMg5bqU6L6T5Ye6IHYyMi54CmBgYAoKIyMjIDQuMiDkv67mlLkgc2VydmljZSDmlofku7blkI7lv4XpobsgZGFlbW9uLXJlbG9hZAoKKirnjrDosaHvvJoqKgoK5pS55LqGIGBFeGVjU3RhcnRgIOi3r+W+hO+8jOmHjeWQr+acjeWKoe+8jOaXpeW/l+mHjOi/mOaYr+aXp+eahCBOb2RlIOeJiOacrOOAggoKKirmoLnlm6DvvJoqKgoKc3lzdGVtZCDnvJPlrZjkuobmnI3liqHmlofku7bvvIznm7TmjqUgYHN5c3RlbWN0bCByZXN0YXJ0YCDkuI3kvJrph43mlrDor7vlj5bjgIIKCioq6Kej5rOV77yaKioKCmBgYGJhc2gKc3lzdGVtY3RsIGRhZW1vbi1yZWxvYWQKc3lzdGVtY3RsIHJlc3RhcnQgb2MtZmVycnkKYGBgCgrmr4/mrKHmlLnlrowgYC9ldGMvc3lzdGVtZC9zeXN0ZW0vb2MtZmVycnkuc2VydmljZWAg6YO96KaB6LeR5LiA6YGNIGBkYWVtb24tcmVsb2FkYOOAggoKIyMjIDQuMyBGRVJSWV9IT1NUIOe7keWumgoKKirnjrDosaHvvJoqKgoKTkFTIOacrOacuiBgY3VybCBodHRwOi8vMTI3LjAuMC4xOjQxOTgwL2hlYWx0aGAg5q2j5bi477yM5L2G5bGA5Z+f572R5YW25LuW6K6+5aSH5omT5LiN5byAIGBodHRwOi8vMTkyLjE2OC4zMS41Mzo0MTk4MC91aWDjgIIKCioq5qC55Zug77yaKioKCum7mOiupCBgRkVSUllfSE9TVD0xMjcuMC4wLjFgIOWPquebkeWQrOWbnueOr+WcsOWdgOOAggoKKirop6Pms5XvvJoqKgoKYGBgaW5pCkVudmlyb25tZW50PUZFUlJZX0hPU1Q9MC4wLjAuMApgYGAKCuaUueWujOiusOW+lyBgZGFlbW9uLXJlbG9hZGAgKyBgcmVzdGFydGDjgIIKCj4g5a6J5YWo5o+Q56S677yaYDAuMC4wLjBgIOaEj+WRs+edgOWxgOWfn+e9keWGheS7u+S9leiuvuWkh+WPr+iuv+mXruOAgkFQSSBLZXkg5piv5ZSv5LiA55qE6Ym05p2D5omL5q6177yM6K+35aal5ZaE5L+d566h77yM5LiN6KaB5pq06Zyy5Yiw5YWs572R44CCCgojIyMgNC40IEFQSSBLZXkg5L2N572uCgoqKueOsOixoe+8mioqCgrmib7kuI3liLDlr4bpkqXvvIxXZWJVSSDmj5DnpLrmnKrmjojmnYPjgIIKCioq5qC55Zug77yaKioKCuWvhumSpeS4jeWcqOmFjee9ruaWh+S7tumHjO+8jOaYr+mmluasoeWQr+WKqOaXtumaj+acuueUn+aIkOeahO+8jOWtmOaUvuWcqOaVsOaNruebruW9leOAggoKKirop6Pms5XvvJoqKgoKYGBgYmFzaApjYXQgJEZFUlJZX0RBVEFfRElSL2FwaS1rZXkKIyDljbMgL3ZvbDEvMTAwMC9vYy1mZXJyeS9kYXRhL2FwaS1rZXkKYGBgCgojIyMgNC41IOmmluasoeWQr+WKqOS4i+i9vSBPcGVuQ29kZQoKKirnjrDosaHvvJoqKgoK5pyN5Yqh5pi+56S6IHJ1bm5pbmfvvIzkvYYgYC9oZWFsdGhgIOi/lOWbniBgcGhhc2U6IHN0YXJ0aW5nYO+8jOaIluaXpeW/l+mHjOayoeaciSAiT0MgRmVycnkgcmVhZHki44CCCgoqKuagueWboO+8mioqCgrpppbmrKHlkK/liqjopoHku47nvZHnu5zkuIvovb0gT3BlbkNvZGUg5LqM6L+b5Yi277yI57qmIDEwME1C77yJ77yM5LiL6L295a6M5oiQ5YmN5pyN5Yqh5aSE5LqOIHN0YXJ0aW5nIOmYtuauteOAggoKKirop6Pms5XvvJoqKgoK6ICQ5b+D562J5Yeg5YiG6ZKf77yM55yL5pel5b+X77yaCgpgYGBiYXNoCmpvdXJuYWxjdGwgLXUgb2MtZmVycnkgLWYKYGBgCgrnnIvliLAgYE9DIEZlcnJ5IHJlYWR5IGF0IC4uLmAg5Y2z5a6M5oiQ44CC5aaC5p6c6ZW/5pe26Ze05Y2h5L2P77yM5qOA5p+lIE5BUyDnvZHnu5zmmK/lkKbmraPluLjjgIIKCi0tLQoKIyMgNS4g6L+b6Zi2CgojIyMgNS4xIHRleHRNb2Rl77ya6Kej5Yaz6YOo5YiG5qih5Z6L55qE5bel5YW36LCD55So5LiN5YW85a65CgoqKuiDjOaZr++8mioqCgpPQyBGZXJyeSDpgJrov4cgT3BlbkNvZGUg55qEIGBmb3JtYXQ6IHsgdHlwZTogJ2pzb25fc2NoZW1hJyB9YCDmnLrliLbnuqbmnZ/mqKHlnovovpPlh7rnu5PmnoTljJYgSlNPTuOAguS9huafkOS6m+aooeWei+eahOS4iua4uOerr+eCueS4jeWFvOWuuei/meS4quacuuWItu+8jOaOoua1i+aXtuS8muaKpe+8mgoKYGBgCm9ubHkgJ2F1dG8nIGlzIHN1cHBvcnRlZCBmb3IgJ3Rvb2xfY2hvaWNlJwpgYGAKCuaOoua1i+eoi+W6j+S8muivr+WIpOivpeaooeWeiyLkuI3mlK/mjIHlt6Xlhbci77yM5bCG5YW25qCH6K6w5Li6IuS7heWvueivnSLvvIhjaGF0T25see+8ieOAguWunua1iyBgb3BlbmNvZGUvbXVzZS1zcGFyay0xLjMtY29udHJpYnV0b3ItZnJlZWAg5bCx6YGH5Yiw6L+Z5Liq6Zeu6aKY4oCU4oCU6ICM5qih5Z6L5pys6Lqr5piv5pSv5oyB5bel5YW36LCD55So55qE44CCCgoqKuino+azle+8iHRleHRNb2RlIOmZjee6p+i3r+W+hO+8ie+8mioqCgrlvZPmjqLmtYvliLDnibnlrprnmoQgYHRvb2xfY2hvaWNlYCDkuI3lhbzlrrnplJnor6/ml7bvvIzoh6rliqjnlKjnuq/mlofmnKzmqKHlvI/ph43or5XvvJror7fmsYLml7bnnIHnlaUgYGZvcm1hdGAg5a2X5q6177yM5qih5Z6L6L+U5Zue57qv5paH5pys5Lit55qEIEpTT04g5L+h5bCB77yM55Sx5qGl5o6l5bGC546w5pyJ55qEIGBkZWNvZGUoKWAg6Kej5p6Q44CCCgpXZWJVSSDkuK3ov5nnsbvmqKHlnovmmL7npLrkuLogYOWPr+eUqMK35paH5pys5qih5byPYO+8jOW3peWFt+iwg+eUqOWKn+iDveWujOaVtOOAgmB0ZXh0TW9kZWAg5qCH6K6w5Lya5oyB5LmF5YyW5Yiw5o6i5rWL57yT5a2Y77yM6YeN5ZCv5ZCO5L6d54S25pyJ5pWI44CCCgojIyMgNS4yIOaOqOeQhuaho+S9jeiHquWKqOmZjee6pwoKKirog4zmma/vvJoqKgoK5YWN6LS55qih5Z6L55qE5o6o55CG5by65bqm77yIcmVhc29uaW5nIGVmZm9ydO+8iemAmuW4uOacieS4iumZkOOAguS+i+WmgiBNdXNlIFNwYXJrIDEuMyDlhY3otLnmoaPmnIDpq5jlj6rliLAgYGhpZ2hg77yM5a6i5oi356uv5aaC5p6c5LygIGByZWFzb25pbmdfZWZmb3J0OiBtYXhg77yM5Lya55u05o6l5oqlIDQwMO+8mgoKYGBgClJlcXVlc3RlZCByZWFzb25pbmcgZWZmb3J0IGlzIG5vdCBhdmFpbGFibGUgZm9yIHRoaXMgbW9kZWwKYGBgCgrnhLblkI7lrqLmiLfnq6/mjonliLDlpIfnlKjmqKHlnovvvIznlKjmiLfkvZPpqozlvojlt67jgIIKCioq6Kej5rOV77yaKioKCuahpeaOpeWxguiHquWKqOmZjee6p++8muivt+axguaho+S9jei2heWHuuaooeWei+aUr+aMgeiMg+WbtOaXtu+8jOiHquWKqOS9v+eUqCLkuI3otoXov4for7fmsYLmoaPkvY3nmoTmnIDpq5jlj6/nlKjmoaMi77yI5aaCIGBtYXhgIOKGkiBgaGlnaGDvvInvvIzogIzkuI3mmK/miqXplJnjgILmoaPkvY3pobrluo/kuLrvvJoKCmBgYApub25lIDwgbWluaW1hbCA8IGxvdyA8IG1lZGl1bSA8IGhpZ2ggPCB4aGlnaCA8IG1heApgYGAKCueJueauiuinhOWIme+8mgoKLSDor7fmsYIgYG5vbmVg77yI5YWz6Zet5o6o55CG77yJ5L2G5qih5Z6L5LiN5pSv5oyB5pe277yMKirkuI3pmY3nuqcqKu+8jOS7jeeEtiA0MDDigJTigJTmgoTmgoTmiZPlvIDmjqjnkIbmmK/plJnor6/ooYzkuLoKLSDpmY3nuqfkv6Hmga/orrDlvZXlnKjor7fmsYLlr7nosaHkuIrvvIzlj6/kvpvml6Xlv5fov73ouKoKCiMjIyA1LjMg5o6l5YWl5a6i5oi356uvCgpPQyBGZXJyeSDmmK/moIflh4bnmoQgT3BlbkFJIOWFvOWuueaOpeWPo++8jOaOpeWFpeS4ieS7tuWll++8mgoKfCDpobkgfCDlgLwgfAp8LS0tfC0tLXwKfCBCYXNlIFVSTCB8IGBodHRwOi8vMTkyLjE2OC4zMS41Mzo0MTk4MC92MWAgfAp8IEFQSSBLZXkgfCBgJEZFUlJZX0RBVEFfRElSL2FwaS1rZXlgIOeahOWGheWuuSB8Cnwg5qih5Z6LIElEIHwgYG9wZW5jb2RlL211c2Utc3BhcmstMS4zLWNvbnRyaWJ1dG9yLWZyZWVgIOetiSB8Cgrojrflj5blrozmlbTmqKHlnovliJfooajvvJoKCmBgYGJhc2gKY3VybCAtcyBodHRwOi8vMTkyLjE2OC4zMS41Mzo0MTk4MC92MS9tb2RlbHMgXAogIC1IICJBdXRob3JpemF0aW9uOiBCZWFyZXIgWU9VUl9BUElfS0VZIiB8IHB5dGhvbjMgLW0ganNvbi50b29sCmBgYAoKKipXb3JrQnVkZHkg5om56YeP5a+85YWl56S65L6L77yaKioKCldvcmtCdWRkeSDnmoToh6rlrprkuYnmqKHlnovlrZjlnKggYCVVU0VSUFJPRklMRSVcLndvcmtidWRkeVxtb2RlbHMuanNvbmDvvIjms6jmhI/mmK/luKbngrnnmoTpmpDol4/nm67lvZXvvInjgILlj6/ku6Xnm7TmjqXnvJbovpEgSlNPTiDmibnph4/mt7vliqDvvJoKCmBgYGpzb24KewogICJpZCI6ICJvcGVuY29kZS9tdXNlLXNwYXJrLTEuMy1jb250cmlidXRvci1mcmVlIiwKICAibmFtZSI6ICJvcGVuY29kZS9tdXNlLXNwYXJrLTEuMy1jb250cmlidXRvci1mcmVlIiwKICAidmVuZG9yIjogIkN1c3RvbSIsCiAgInVybCI6ICJodHRwOi8vMTkyLjE2OC4zMS41Mzo0MTk4MC92MSIsCiAgImFwaUtleSI6ICJZT1VSX0FQSV9LRVkiLAogICJzdXBwb3J0c1Rvb2xDYWxsIjogdHJ1ZSwKICAic3VwcG9ydHNJbWFnZXMiOiB0cnVlLAogICJzdXBwb3J0c1JlYXNvbmluZyI6IHRydWUsCiAgInVzZUN1c3RvbVByb3RvY29sIjogZmFsc2UsCiAgInJlYXNvbmluZyI6IHsKICAgICJzdXBwb3J0ZWRFZmZvcnRzIjogWyJoaWdoIiwgIm1lZGl1bSIsICJsb3ciXQogIH0sCiAgIm1heElucHV0VG9rZW5zIjogMTAwMDAwMAp9CmBgYAoK5pS55a6M6YeN5ZCvIFdvcmtCdWRkeSDljbPlj6/jgIIKCi0tLQoKIyMgNi4g5Y+C6ICDCgojIyMgNi4xIOeOr+Wig+WPmOmHjwoKfCDlj5jph48gfCDpu5jorqTlgLwgfCDor7TmmI4gfAp8LS0tLS0tfC0tLS0tLS0tfC0tLS0tLXwKfCBgRkVSUllfSE9TVGAgfCBgMTI3LjAuMC4xYCB8IOebkeWQrOWcsOWdgO+8jOWxgOWfn+e9keiuv+mXruiuvuS4uiBgMC4wLjAuMGAgfAp8IGBGRVJSWV9QT1JUYCB8IGA0MTk4MGAgfCDmnI3liqHnq6/lj6MgfAp8IGBGRVJSWV9EQVRBX0RJUmAgfCBgLi9kYXRhYCB8IOaVsOaNruebruW9le+8iEFQSSBLZXnjgIHnvJPlrZjvvIkgfAp8IGBGRVJSWV9OT19TWU5DYCB8IGAwYCB8IOiuvuS4uiBgMWAg6Lez6L+HIFdvcmtCdWRkeSDlkIzmraUgfAoKIyMjIDYuMiBBUEkg56uv54K5Cgp8IOerr+eCuSB8IOivtOaYjiB8CnwtLS0tLS18LS0tLS0tfAp8IGBHRVQgL2hlYWx0aGAgfCDlgaXlurfmo4Dmn6XvvIjpnIDpibTmnYPvvInvvIzov5Tlm54gcGhhc2XjgIHmqKHlnovmlbDjgIHniYjmnKwgfAp8IGBHRVQgL3YxL21vZGVsc2AgfCDmqKHlnovliJfooajvvIhPcGVuQUkg5qC85byP77yJIHwKfCBgUE9TVCAvdjEvY2hhdC9jb21wbGV0aW9uc2AgfCDlr7nor53ooaXlhajvvIhPcGVuQUkg5qC85byP77yJIHwKfCBgR0VUIC91aWAgfCDkuK3mlocgV2ViVUkg566h55CG6Z2i5p2/IHwKfCBgR0VUIC91aS9hcGkvc3RhdHVzYCB8IFdlYlVJIOeKtuaAgeaOpeWPo++8iOmcgCBCZWFyZXIgS2V577yJIHwKfCBgUE9TVCAvdWkvYXBpL3Byb2JlYCB8IFdlYlVJIOinpuWPkeaooeWei+ajgOa1i++8iOmcgCBCZWFyZXIgS2V577yJIHwKCiMjIyA2LjMg5paH5Lu25L2N572uCgp8IOi3r+W+hCB8IOivtOaYjiB8CnwtLS0tLS18LS0tLS0tfAp8IGAvdm9sMS8xMDAwL29jLWZlcnJ5L1J1aUMtb2MtZmVycnlgIHwg56iL5bqP55uu5b2VIHwKfCBgL3ZvbDEvMTAwMC9vYy1mZXJyeS9kYXRhL2FwaS1rZXlgIHwgQVBJIOWvhumSpSB8CnwgYC92b2wxLzEwMDAvb2MtZmVycnkvZGF0YS9gIHwg5o6i5rWL57yT5a2Y562J6L+Q6KGM5pe25pWw5o2uIHwKfCBgL2V0Yy9zeXN0ZW1kL3N5c3RlbS9vYy1mZXJyeS5zZXJ2aWNlYCB8IHN5c3RlbWQg5pyN5Yqh5paH5Lu2IHwKfCBgL3Vzci9sb2NhbC9iaW4vbm9kZWAgfCBOb2RlIHYyMiDkuozov5vliLYgfAoKIyMjIDYuNCDluLjnlKjov5Dnu7Tlkb3ku6QKCmBgYGJhc2gKIyDmn6XnnIvnirbmgIEKc3lzdGVtY3RsIHN0YXR1cyBvYy1mZXJyeSAtLW5vLXBhZ2VyIHwgaGVhZCAtMTIKCiMg5a6e5pe25pel5b+XCmpvdXJuYWxjdGwgLXUgb2MtZmVycnkgLWYKCiMg6YeN5ZCvCnN5c3RlbWN0bCByZXN0YXJ0IG9jLWZlcnJ5CgojIOW8gOacuuiHquWQrwpzeXN0ZW1jdGwgZW5hYmxlIG9jLWZlcnJ5CgojIOWBpeW6t+ajgOafpQpjdXJsIC1zIGh0dHA6Ly8xMjcuMC4wLjE6NDE5ODAvaGVhbHRoIFwKICAtSCAiQXV0aG9yaXphdGlvbjogQmVhcmVyICQoY2F0IC92b2wxLzEwMDAvb2MtZmVycnkvZGF0YS9hcGkta2V5KSIKYGBgCgotLS0KCiroi7HmlofniYjop4EgW1JFQURNRV9FTi5tZF0oUkVBRE1FX0VOLm1kKSoK
+# OC Ferry NAS 实战：从源码到 24 小时在线
+
+> 实战记录：2026 年 10 月 15 日，OC Ferry 0.3.0 从 Windows 迁移到 NAS（J3160 / fnOS），systemd 常驻运行，9 个免费模型全部可用，自研中文 WebUI 上线。
+
+---
+
+## 目录
+
+- [1. 简介](#1-简介)
+- [2. 环境准备](#2-环境准备)
+- [3. 迁移步骤](#3-迁移步骤)
+- [4. 避坑指南](#4-避坑指南)
+- [5. 进阶](#5-进阶)
+- [6. 参考](#6-参考)
+
+---
+
+## 1. 简介
+
+### OC Ferry 是什么
+
+OC Ferry 是一个桥接服务，把 [OpenCode](https://github.com/sst/opencode) 的免费模型通过 OpenAI 兼容的 API 暴露出来。任何支持自定义 base URL 的客户端（WorkBuddy、Hermes、Codex 等）都可以接入使用。
+
+核心能力：
+
+- OpenAI 兼容的 `/v1` 转发接口（chat completions）
+- 启动时自动探测模型可用性（含工具调用能力）
+- API Key 鉴权
+- 自研中文 WebUI（`/ui`）：状态监控、模型列表、一键检测、代理开关
+
+### 为什么搬到 NAS
+
+| 场景 | Windows 跑 | NAS 跑 |
+|------|-----------|--------|
+| 开机要求 | 电脑必须开着 | 7x24 常年在线 |
+| 局域网访问 | 电脑休眠就断 | 随时可用 |
+| 多设备共享 | 得逐台配置 | 一个地址全家用 |
+| 功耗 | 几十瓦 | J3160 十几瓦 |
+
+一句话：NAS 版是一次部署、长期受益。手机、电脑、平板，局域网内任何设备填一个地址就能用。
+
+---
+
+## 2. 环境准备
+
+### 2.1 NAS 要求
+
+- 能 SSH 登录（root 或有 sudo 权限的用户）
+- 有 systemd（fnOS / Debian / Ubuntu 系都自带）
+- 至少 2GB 可用磁盘空间（含 OpenCode 二进制约 100MB + Node 运行时）
+
+本次实战环境：
+
+```
+设备：J3160 小主机（4GB 内存）
+系统：fnOS
+主机名：hiyori
+IP：192.168.31.53
+部署目录：/vol1/1000/oc-ferry
+数据目录：/vol1/1000/oc-ferry/data
+服务端口：41980
+```
+
+### 2.2 Node.js v22+（关键）
+
+**这是最重要的前置条件。** NAS 自带的 Node 往往是 v18，OC Ferry 依赖的 `undici` 在 Node 18 下加载失败，服务会直接退出（详见[避坑指南](#41-node-18-vs-22)）。
+
+检查当前版本：
+
+```bash
+node -v
+# 如果输出 v18.x，必须升级
+```
+
+安装 Node v22 二进制版（以 x64 为例，ARM 机型请下载对应的 arm64 包）：
+
+```bash
+cd /tmp
+curl -sL https://nodejs.org/dist/v22.22.0/node-v22.22.0-linux-x64.tar.xz -o node.tar.xz
+tar -xf node.tar.xz
+cp -r node-v22.22.0-linux-x64/bin/* /usr/local/bin/
+cp -r node-v22.22.0-linux-x64/lib/* /usr/local/lib/ 2>/dev/null
+cp -r node-v22.22.0-linux-x64/include/* /usr/local/include/ 2>/dev/null
+cp -r node-v22.22.0-linux-x64/share/* /usr/local/share/ 2>/dev/null
+/usr/local/bin/node -v
+# 应输出 v22.22.0
+```
+
+> 注意：不要覆盖系统自带的 `/usr/bin/node`，把 v22 装到 `/usr/local` 即可。`/usr/local/bin` 在 PATH 中的优先级高于 `/usr/bin`，且 systemd 服务里我们会写绝对路径。
+
+### 2.3 源码准备（在开发机上）
+
+假设你已经有一份能跑的 OC Ferry 源码（含 `node_modules` 已安装）：
+
+```bash
+cd ~/workspace/oc-ferry-build
+tar --exclude='RuiC-oc-ferry/node_modules' \
+    --exclude='RuiC-oc-ferry/release' \
+    --exclude='RuiC-oc-ferry/.git' \
+    -czf oc-ferry-nas.tar.gz RuiC-oc-ferry
+ls -lh oc-ferry-nas.tar.gz
+# 约 3-7MB（不含 node_modules）
+```
+
+> `node_modules` 不打包，到 NAS 上重新 `npm install --production`，避免架构不一致（比如开发机是 Windows，NAS 是 Linux）。
+
+---
+
+## 3. 迁移步骤
+
+### 3.1 传输到 NAS
+
+用你顺手的方式传上去（scp、rsync、网盘、catbox 等）：
+
+```bash
+# 示例：scp
+scp oc-ferry-nas.tar.gz root@192.168.31.53:/vol1/1000/oc-ferry/
+```
+
+### 3.2 解压并安装依赖
+
+```bash
+ssh root@192.168.31.53
+mkdir -p /vol1/1000/oc-ferry
+cd /vol1/1000/oc-ferry
+tar -xzf oc-ferry-nas.tar.gz
+cd RuiC-oc-ferry
+npm install --production
+```
+
+### 3.3 创建 systemd 服务
+
+```bash
+cat > /etc/systemd/system/oc-ferry.service << 'EOF'
+[Unit]
+Description=OC Ferry - OpenCode free models bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/vol1/1000/oc-ferry/RuiC-oc-ferry
+Environment=FERRY_HOST=0.0.0.0
+Environment=FERRY_PORT=41980
+Environment=FERRY_DATA_DIR=/vol1/1000/oc-ferry/data
+Environment=FERRY_NO_SYNC=1
+ExecStart=/usr/local/bin/node src/main.js
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+
+关键配置说明：
+
+| 配置项 | 作用 |
+|--------|------|
+| `FERRY_HOST=0.0.0.0` | 监听所有网卡，局域网可访问（默认 127.0.0.1 只能本机） |
+| `FERRY_PORT=41980` | 服务端口 |
+| `FERRY_DATA_DIR` | 数据目录（API Key、模型探测缓存都放这里） |
+| `FERRY_NO_SYNC=1` | 跳过 WorkBuddy 同步（NAS 上不需要） |
+| `ExecStart=/usr/local/bin/node` | **必须指向 Node v22**，不能用系统自带的 v18 |
+| `Restart=always` | 崩溃自动重启 |
+
+### 3.4 启动服务
+
+```bash
+systemctl daemon-reload
+systemctl enable oc-ferry
+systemctl start oc-ferry
+sleep 10
+systemctl status oc-ferry --no-pager | head -12
+```
+
+正常应看到 `Active: active (running)`。
+
+### 3.5 确认启动完成
+
+首次启动会自动下载 OpenCode 二进制，需要几分钟。看日志确认：
+
+```bash
+journalctl -u oc-ferry --no-pager | grep -i "ready\|opencode" | tail -5
+```
+
+看到类似下面的输出就是就绪了：
+
+```
+OC Ferry ready at http://127.0.0.1:41980/v1; 9 free models; probe cache hit 0, probing 9
+```
+
+也可以直接查健康检查接口：
+
+```bash
+curl -s http://127.0.0.1:41980/health \
+  -H "Authorization: Bearer $(cat /vol1/1000/oc-ferry/data/api-key)" | head -c 300
+```
+
+`phase` 为 `ready` 即正常。
+
+### 3.6 获取 API Key 并打开 WebUI
+
+```bash
+cat /vol1/1000/oc-ferry/data/api-key
+```
+
+复制输出的密钥，在浏览器打开：
+
+```
+http://192.168.31.53:41980/ui
+```
+
+粘贴密钥后，可以看到模型列表、逐个检测状态、一键重新检测、系统代理开关等。
+
+转发接口地址（给客户端用）：
+
+```
+http://192.168.31.53:41980/v1
+```
+
+---
+
+## 4. 避坑指南
+
+### 4.1 Node 18 vs 22
+
+**现象：**
+
+```bash
+journalctl -u oc-ferry --no-pager | tail -20
+# 看到 undici 加载失败，Node.js v18.20.4，服务状态 1/FAILURE
+```
+
+**根因：**
+
+NAS 系统自带的 Node 是 v18，OC Ferry 依赖的 `undici` 库在 Node 18 下无法加载。服务启动即崩溃，systemd 反复重启也无济于事。
+
+**解法：**
+
+按 [2.2](#22-nodejs-v22关键) 安装 Node v22 到 `/usr/local`，并确保 service 文件的 `ExecStart` 写的是绝对路径：
+
+```ini
+# 错误
+ExecStart=/usr/bin/node src/main.js
+# 正确
+ExecStart=/usr/local/bin/node src/main.js
+```
+
+验证：
+
+```bash
+grep ExecStart /etc/systemd/system/oc-ferry.service
+/usr/local/bin/node -v   # 应输出 v22.x
+```
+
+### 4.2 修改 service 文件后必须 daemon-reload
+
+**现象：**
+
+改了 `ExecStart` 路径，重启服务，日志里还是旧的 Node 版本。
+
+**根因：**
+
+systemd 缓存了服务文件，直接 `systemctl restart` 不会重新读取。
+
+**解法：**
+
+```bash
+systemctl daemon-reload
+systemctl restart oc-ferry
+```
+
+每次改完 `/etc/systemd/system/oc-ferry.service` 都要跑一遍 `daemon-reload`。
+
+### 4.3 FERRY_HOST 绑定
+
+**现象：**
+
+NAS 本机 `curl http://127.0.0.1:41980/health` 正常，但局域网其他设备打不开 `http://192.168.31.53:41980/ui`。
+
+**根因：**
+
+默认 `FERRY_HOST=127.0.0.1` 只监听回环地址。
+
+**解法：**
+
+```ini
+Environment=FERRY_HOST=0.0.0.0
+```
+
+改完记得 `daemon-reload` + `restart`。
+
+> 安全提示：`0.0.0.0` 意味着局域网内任何设备可访问。API Key 是唯一的鉴权手段，请妥善保管，不要暴露到公网。
+
+### 4.4 API Key 位置
+
+**现象：**
+
+找不到密钥，WebUI 提示未授权。
+
+**根因：**
+
+密钥不在配置文件里，是首次启动时随机生成的，存放在数据目录。
+
+**解法：**
+
+```bash
+cat $FERRY_DATA_DIR/api-key
+# 即 /vol1/1000/oc-ferry/data/api-key
+```
+
+### 4.5 首次启动下载 OpenCode
+
+**现象：**
+
+服务显示 running，但 `/health` 返回 `phase: starting`，或日志里没有 "OC Ferry ready"。
+
+**根因：**
+
+首次启动要从网络下载 OpenCode 二进制（约 100MB），下载完成前服务处于 starting 阶段。
+
+**解法：**
+
+耐心等几分钟，看日志：
+
+```bash
+journalctl -u oc-ferry -f
+```
+
+看到 `OC Ferry ready at ...` 即完成。如果长时间卡住，检查 NAS 网络是否正常。
+
+---
+
+## 5. 进阶
+
+### 5.1 textMode：解决部分模型的工具调用不兼容
+
+**背景：**
+
+OC Ferry 通过 OpenCode 的 `format: { type: 'json_schema' }` 机制约束模型输出结构化 JSON。但某些模型的上游端点不兼容这个机制，探测时会报：
+
+```
+only 'auto' is supported for 'tool_choice'
+```
+
+探测程序会误判该模型"不支持工具"，将其标记为"仅对话"（chatOnly）。实测 `opencode/muse-spark-1.3-contributor-free` 就遇到这个问题——而模型本身是支持工具调用的。
+
+**解法（textMode 降级路径）：**
+
+当探测到特定的 `tool_choice` 不兼容错误时，自动用纯文本模式重试：请求时省略 `format` 字段，模型返回纯文本中的 JSON 信封，由桥接层现有的 `decode()` 解析。
+
+WebUI 中这类模型显示为 `可用·文本模式`，工具调用功能完整。`textMode` 标记会持久化到探测缓存，重启后依然有效。
+
+### 5.2 推理档位自动降级
+
+**背景：**
+
+免费模型的推理强度（reasoning effort）通常有上限。例如 Muse Spark 1.3 免费档最高只到 `high`，客户端如果传 `reasoning_effort: max`，会直接报 400：
+
+```
+Requested reasoning effort is not available for this model
+```
+
+然后客户端掉到备用模型，用户体验很差。
+
+**解法：**
+
+桥接层自动降级：请求档位超出模型支持范围时，自动使用"不超过请求档位的最高可用档"（如 `max` → `high`），而不是报错。档位顺序为：
+
+```
+none < minimal < low < medium < high < xhigh < max
+```
+
+特殊规则：
+
+- 请求 `none`（关闭推理）但模型不支持时，**不降级**，仍然 400——悄悄打开推理是错误行为
+- 降级信息记录在请求对象上，可供日志追踪
+
+### 5.3 接入客户端
+
+OC Ferry 是标准的 OpenAI 兼容接口，接入三件套：
+
+| 项 | 值 |
+|---|---|
+| Base URL | `http://192.168.31.53:41980/v1` |
+| API Key | `$FERRY_DATA_DIR/api-key` 的内容 |
+| 模型 ID | `opencode/muse-spark-1.3-contributor-free` 等 |
+
+获取完整模型列表：
+
+```bash
+curl -s http://192.168.31.53:41980/v1/models \
+  -H "Authorization: Bearer YOUR_API_KEY" | python3 -m json.tool
+```
+
+**WorkBuddy 批量导入示例：**
+
+WorkBuddy 的自定义模型存在 `%USERPROFILE%\.workbuddy\models.json`（注意是带点的隐藏目录）。可以直接编辑 JSON 批量添加：
+
+```json
+{
+  "id": "opencode/muse-spark-1.3-contributor-free",
+  "name": "opencode/muse-spark-1.3-contributor-free",
+  "vendor": "Custom",
+  "url": "http://192.168.31.53:41980/v1",
+  "apiKey": "YOUR_API_KEY",
+  "supportsToolCall": true,
+  "supportsImages": true,
+  "supportsReasoning": true,
+  "useCustomProtocol": false,
+  "reasoning": {
+    "supportedEfforts": ["high", "medium", "low"]
+  },
+  "maxInputTokens": 1000000
+}
+```
+
+改完重启 WorkBuddy 即可。
+
+---
+
+## 6. 参考
+
+### 6.1 环境变量
+
+| 变量 | 默认值 | 说明 |
+|------|--------|------|
+| `FERRY_HOST` | `127.0.0.1` | 监听地址，局域网访问设为 `0.0.0.0` |
+| `FERRY_PORT` | `41980` | 服务端口 |
+| `FERRY_DATA_DIR` | `./data` | 数据目录（API Key、缓存） |
+| `FERRY_NO_SYNC` | `0` | 设为 `1` 跳过 WorkBuddy 同步 |
+
+### 6.2 API 端点
+
+| 端点 | 说明 |
+|------|------|
+| `GET /health` | 健康检查（需鉴权），返回 phase、模型数、版本 |
+| `GET /v1/models` | 模型列表（OpenAI 格式） |
+| `POST /v1/chat/completions` | 对话补全（OpenAI 格式） |
+| `GET /ui` | 中文 WebUI 管理面板 |
+| `GET /ui/api/status` | WebUI 状态接口（需 Bearer Key） |
+| `POST /ui/api/probe` | WebUI 触发模型检测（需 Bearer Key） |
+
+### 6.3 文件位置
+
+| 路径 | 说明 |
+|------|------|
+| `/vol1/1000/oc-ferry/RuiC-oc-ferry` | 程序目录 |
+| `/vol1/1000/oc-ferry/data/api-key` | API 密钥 |
+| `/vol1/1000/oc-ferry/data/` | 探测缓存等运行时数据 |
+| `/etc/systemd/system/oc-ferry.service` | systemd 服务文件 |
+| `/usr/local/bin/node` | Node v22 二进制 |
+
+### 6.4 常用运维命令
+
+```bash
+# 查看状态
+systemctl status oc-ferry --no-pager | head -12
+
+# 实时日志
+journalctl -u oc-ferry -f
+
+# 重启
+systemctl restart oc-ferry
+
+# 开机自启
+systemctl enable oc-ferry
+
+# 健康检查
+curl -s http://127.0.0.1:41980/health \
+  -H "Authorization: Bearer $(cat /vol1/1000/oc-ferry/data/api-key)"
+```
+
+---
+
+*英文版见 [README_EN.md](README_EN.md)*
