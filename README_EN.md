@@ -1,6 +1,8 @@
 # OC Ferry on NAS: From Source to 24/7
 
 > Field notes from a real migration on 2026-10-15: OC Ferry 0.3.0 moved from Windows to a NAS (J3160 / fnOS), running as a systemd service with 9 free models available and a custom Chinese WebUI.
+>
+> **Compatibility note**: Tested on fnOS (J3160 mini PC). The core steps (Node v22 + systemd service + env vars) are standard Linux operations — any systemd-based NAS (Synology DSM 7+, QNAP QTS, OpenMediaVault) works with adjusted paths; TrueNAS (FreeBSD, no systemd) needs its own service mechanism. `/vol1/1000/` is the fnOS storage layout — replace with your system's actual paths.
 
 ---
 
@@ -12,6 +14,7 @@
 - [4. Pitfall Guide](#4-pitfall-guide)
 - [5. Advanced](#5-advanced)
 - [6. Reference](#6-reference)
+- [7. Compatibility](#7-compatibility)
 
 ---
 
@@ -447,6 +450,36 @@ systemctl enable oc-ferry
 curl -s http://127.0.0.1:41980/health \
   -H "Authorization: Bearer $(cat /vol1/1000/oc-ferry/data/api-key)"
 ```
+
+---
+
+## 7. Compatibility
+
+### 7.1 Tested Environment
+
+| Item | Value |
+|------|-------|
+| Device | J3160 mini PC (4GB RAM) |
+| OS | fnOS |
+| Node | v22.22.0 (binary install to `/usr/local`) |
+| Service manager | systemd |
+| OC Ferry | 0.3.0 |
+
+### 7.2 Other NAS Systems
+
+| System | Feasibility | Notes |
+|--------|-------------|-------|
+| Synology DSM 7+ | Works | Has systemd, adjust storage paths per this guide |
+| QNAP QTS | Works | Linux-based, has systemd, watch permission config |
+| OpenMediaVault | Works | Debian-based, native systemd |
+| TrueNAS | Needs adaptation | FreeBSD kernel, no systemd — use its own service mechanism |
+| Unraid | Works | Can use Docker or manual service setup |
+
+Only three core requirements: **Linux kernel + Node v22 + a way to keep the process running** (systemd / Docker / other). Meet those and the approach in this guide applies; adjust specific commands to each system's conventions.
+
+### 7.3 Model Count Note
+
+The "9 free models" mentioned was the count measured on 2026-10-15. OpenCode's free model catalog changes over time (additions, removals, renames) — always check `/v1/models` for the current list rather than expecting the number to match.
 
 ---
 
