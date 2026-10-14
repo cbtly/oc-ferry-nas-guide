@@ -15,6 +15,7 @@
 - [5. 进阶](#5-进阶)
 - [6. 参考](#6-参考)
 - [7. 兼容性](#7-兼容性)
+- [8. 致谢](#8-致谢)
 
 ---
 
@@ -422,6 +423,33 @@ WorkBuddy 的自定义模型存在 `%USERPROFILE%\.workbuddy\models.json`（注�
 
 改完重启 WorkBuddy 即可。
 
+### 5.4 代理与节点选择
+
+OC Ferry 需要联网访问 OpenCode 上游，代理方案有两种：
+
+**方案一：路由器透明代理（推荐）**
+
+如果路由器上跑了 ShellClash 之类的透明代理，NAS 的出站流量自动走代理，OC Ferry 侧**什么都不用配**——WebUI 里的"使用系统代理"开关保持关闭即可。
+
+**方案二：系统代理**
+
+如果没有路由器代理，打开 WebUI 的"使用系统代理"开关，OC Ferry 会读取系统环境变量（`HTTP_PROXY` / `HTTPS_PROXY`）走代理。需要在 systemd 服务文件里加上：
+
+```ini
+Environment=HTTP_PROXY=http://192.168.31.1:7890
+Environment=HTTPS_PROXY=http://192.168.31.1:7890
+```
+
+**节点选择（重要）：**
+
+部分模型有地区限制。实测 `opencode/muse-spark-1.3-contributor-free` 在香港节点会报：
+
+```
+This model is not available in your country
+```
+
+解法：在代理工具里把相关域名的节点切换到**日本、台湾或美国**，避开香港节点。这是代理侧的配置，与 OC Ferry 无关。
+
 ---
 
 ## 6. 参考
@@ -505,6 +533,15 @@ curl -s http://127.0.0.1:41980/health \
 ### 7.3 模型数量说明
 
 教程中提到的"9 个免费模型"是 2026 年 10 月 15 日实测时的数量。OpenCode 的免费模型目录会随时间变化（增减、更名），实际以 `/v1/models` 返回为准，不必纠结数字是否对得上。
+
+---
+
+## 8. 致谢
+
+本教程基于 [OC Ferry](https://github.com/HRuiCcc/RuiC-oc-ferry) 项目，感谢原作者 [HRuiCcc](https://github.com/HRuiCcc) 的开源贡献。
+
+- 原项目地址：https://github.com/HRuiCcc/RuiC-oc-ferry
+- 上游依赖：[OpenCode](https://github.com/sst/opencode)
 
 ---
 
