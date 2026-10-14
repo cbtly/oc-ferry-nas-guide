@@ -1,6 +1,8 @@
 # OC Ferry NAS 实战：从源码到 24 小时在线
 
 > 实战记录：2026 年 10 月 15 日，OC Ferry 0.3.0 从 Windows 迁移到 NAS（J3160 / fnOS），systemd 常驻运行，9 个免费模型全部可用，自研中文 WebUI 上线。
+>
+> **兼容性说明**：本教程在 fnOS（J3160 小主机）上实测通过。核心步骤（Node v22 + systemd 服务 + 环境变量）是标准 Linux 操作，任何带 systemd 的 NAS（如群晖 DSM 7+、威联通 QTS、OpenMediaVault）照着调整路径即可用；TrueNAS（FreeBSD 无 systemd）需改用其自身的服务管理机制。文中 `/vol1/1000/` 是 fnOS 的存储路径，其他系统请替换为实际路径。
 
 ---
 
@@ -12,6 +14,7 @@
 - [4. 避坑指南](#4-避坑指南)
 - [5. 进阶](#5-进阶)
 - [6. 参考](#6-参考)
+- [7. 兼容性](#7-兼容性)
 
 ---
 
@@ -472,6 +475,36 @@ systemctl enable oc-ferry
 curl -s http://127.0.0.1:41980/health \
   -H "Authorization: Bearer $(cat /vol1/1000/oc-ferry/data/api-key)"
 ```
+
+---
+
+## 7. 兼容性
+
+### 7.1 实测环境
+
+| 项 | 值 |
+|---|---|
+| 设备 | J3160 小主机（4GB 内存） |
+| 系统 | fnOS |
+| Node | v22.22.0（二进制安装到 `/usr/local`） |
+| 服务管理 | systemd |
+| OC Ferry | 0.3.0 |
+
+### 7.2 其他 NAS 系统
+
+| 系统 | 可行性 | 说明 |
+|------|--------|------|
+| 群晖 DSM 7+ | 可行 | 有 systemd，照本教程调整存储路径即可 |
+| 威联通 QTS | 可行 | 基于 Linux，有 systemd，注意权限配置 |
+| OpenMediaVault | 可行 | Debian 系，原生 systemd |
+| TrueNAS | 需调整 | FreeBSD 内核，无 systemd，需改用其服务管理机制 |
+| Unraid | 可行 | 可用 Docker 或手动配置服务 |
+
+核心要求只有三条：**Linux 内核 + Node v22 + 能常驻运行进程的方式**（systemd / Docker / 其他）。满足这三条，本教程的思路都适用，具体命令按各家系统的习惯调整。
+
+### 7.3 模型数量说明
+
+教程中提到的"9 个免费模型"是 2026 年 10 月 15 日实测时的数量。OpenCode 的免费模型目录会随时间变化（增减、更名），实际以 `/v1/models` 返回为准，不必纠结数字是否对得上。
 
 ---
 
