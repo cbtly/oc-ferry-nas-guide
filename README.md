@@ -502,6 +502,22 @@ OpenCode 上游的免费模型会轮换（如下架旧模型、上新如 `DeepSe
 
 **部署：** 打包 `src/` 为 tar.gz，NAS 上解压覆盖后 `systemctl restart oc-ferry`，浏览器硬刷新（Ctrl+F5）。
 
+**布局修复（v8/v9）：**
+
+- v8：模型卡片上长 ID 与右上角"可用" badge 重叠，`.name` 加 `padding-right:70px` 避让
+- v9：宽屏下主区内容偏左、右侧大片留白，`.main` 加 `margin:0 auto; width:100%` 居中
+
+**NAS 直连下载（推荐）：** 不用先下到电脑再传，直接在 NAS 上 wget：
+
+```bash
+cd /vol1/1000/oc-ferry/RuiC-oc-ferry
+wget "<包链接>" -O oc-ferry-nas-v9-centerfix.tar.gz
+tar -xzf oc-ferry-nas-v9-centerfix.tar.gz
+systemctl restart oc-ferry
+```
+
+v9 为最终版，后续无问题不再迭代。
+
 ---
 
 ---

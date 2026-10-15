@@ -477,6 +477,22 @@ The original WebUI was only 142 lines and barebones. Rebuilt as a Chinese consol
 
 **Deploy:** Tar `src/`, extract over NAS copy, `systemctl restart oc-ferry`, hard refresh browser (Ctrl+F5).
 
+**Layout fixes (v8/v9):**
+
+- v8: Long model IDs overlapped the top-right status badge on model cards — added `padding-right:70px` to `.name`
+- v9: Main content hugged the left on wide screens with empty space on the right — added `margin:0 auto; width:100%` to `.main` for centering
+
+**Direct download on NAS (recommended):** Skip the PC transfer, wget directly on NAS:
+
+```bash
+cd /vol1/1000/oc-ferry/RuiC-oc-ferry
+wget "<package-url>" -O oc-ferry-nas-v9-centerfix.tar.gz
+tar -xzf oc-ferry-nas-v9-centerfix.tar.gz
+systemctl restart oc-ferry
+```
+
+v9 is the final version; no further iterations unless issues arise.
+
 ---
 
 ---
