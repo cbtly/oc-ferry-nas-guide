@@ -425,6 +425,60 @@ This model is not available in your country
 
 Fix: switch the relevant domains to **Japan, Taiwan, or US** nodes in your proxy tool, avoiding Hong Kong. This is a proxy-side configuration, unrelated to OC Ferry.
 
+### 5.4 Context Window Override: Hard-Correcting Upstream Data
+
+**Background:**
+
+On 2026-10-15, testing revealed WorkBuddy showed `Muse Spark 1.3` with only 256k context, when it should be 1M. Two layers of issues:
+
+1. OC Ferry's `/v1/models` endpoint doesn't report context (not in OpenAI spec);
+2. The `maxInputTokens` OC Ferry writes to WorkBuddy's `models.json` comes from the upstream registry, which has wrong data (e.g., `MiMo-V2.6-Flash` marked as 200k).
+
+Key finding: WorkBuddy's UI uses its own built-in model library and **ignores `maxInputTokens` in `models.json`** — so even after fixing OC Ferry, the UI display still needs manual adjustment.
+
+**Fix:**
+
+Added `KNOWN_CONTEXT_OVERRIDES` table in `src/backend.js`, matching by model name substring (OpenRouter official data, verified 2026-10-15):
+
+| Model keyword | Correct context |
+|--------------|-----------------|
+| `muse-spark` | 1,048,576 (1M) |
+| `mimo-v2.6-flash` / `mimo-v2.6-pro` | 1,050,000 |
+| `nemotron-3.5-lightning` | 262,144 (256k) |
+
+This ensures OC Ferry writes correct values during sync. WorkBuddy's UI display still needs one manual setting — that's client behavior, can't be changed.
+
+### 5.5 Model Auto-Sync: No More Manual Tracking
+
+**Background:**
+
+OpenCode's upstream free models rotate (old ones removed, new ones like `DeepSeek V4.1 Flash` added). WorkBuddy's list is static and doesn't follow.
+
+**Fix (two parts):**
+
+1. **Win11 scheduled sync**: `sync-models-full.mjs` calls OC Ferry's `syncModels` from source, fetches model list from NAS `/health`, auto add/remove/update `models.json` (only touches OC Ferry's own entries). `setup-sync-task.ps1` creates a Windows scheduled task with one click, running every 3 days at 8:00 AM.
+
+2. **NAS scheduled restart**: OC Ferry auto-compares local OpenCode version with official latest on startup, downloading replacement if outdated. A systemd timer (`oc-ferry-restart.timer`) runs `systemctl restart oc-ferry` every Sunday at 4:00 AM, triggering the OpenCode update check.
+
+### 5.6 WebUI v2: Custom Chinese Console
+
+**Background:**
+
+The original WebUI was only 142 lines and barebones. Rebuilt as a Chinese console inspired by FreeRouter's layout, but with our own theme (teal + ATRI background).
+
+**Features:**
+
+- **Sidebar nav**: Overview / Free Models / Usage / Logs / Settings
+- **Overview**: Status cards (running state, available models, OpenCode version, proxy); API access info (one-click copy .env / curl / JSON); quick actions; model status glance
+- **Free Models**: Card grid, each showing context, output limit, capability tags (reasoning/image/toolcall), copy-ID button, checkbox for WorkBuddy import
+- **Usage**: Probe stats, per-model probe records table
+- **Logs**: Probe records as log stream, with search and success/fail filter, auto-scroll — for troubleshooting
+- **Settings**: API Key management, system proxy toggle, refresh interval, background toggle
+
+**Deploy:** Tar `src/`, extract over NAS copy, `systemctl restart oc-ferry`, hard refresh browser (Ctrl+F5).
+
+---
+
 ---
 
 ## 6. Reference

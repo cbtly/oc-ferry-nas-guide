@@ -450,6 +450,60 @@ This model is not available in your country
 
 解法：在代理工具里把相关域名的节点切换到**日本、台湾或美国**，避开香港节点。这是代理侧的配置，与 OC Ferry 无关。
 
+### 5.4 上下文窗口修正：硬覆盖上游错误数据
+
+**背景：**
+
+2026-10-15 实测发现，WorkBuddy 里 `Muse Spark 1.3` 显示上下文只有 256k，但实际应该是 1M。排查发现两层问题：
+
+1. OC Ferry 的 `/v1/models` 接口不报上下文（OpenAI 标准无此字段）；
+2. OC Ferry 同步到 WorkBuddy 的 `models.json` 时写入的 `maxInputTokens` 来自上游注册表，数据有误（如 `MiMo-V2.6-Flash` 被标成 200k）。
+
+更关键的是：WorkBuddy 界面用自己内置的模型库，**不读 `models.json` 里的 `maxInputTokens`**——所以 OC 侧修好后，界面显示仍需手动改。
+
+**解法：**
+
+在 `src/backend.js` 加 `KNOWN_CONTEXT_OVERRIDES` 硬覆盖表，按模型名子串匹配（OpenRouter 官方数据，2026-10-15 核实）：
+
+| 模型关键词 | 正确上下文 |
+|-----------|-----------|
+| `muse-spark` | 1,048,576 (1M) |
+| `mimo-v2.6-flash` / `mimo-v2.6-pro` | 1,050,000 |
+| `nemotron-3.5-lightning` | 262,144 (256k) |
+
+这样 OC Ferry 自己同步时写入正确值。WorkBuddy 界面显示仍需手动设置一次——这是客户端行为，改不了。
+
+### 5.5 模型自动同步：上游轮换不再手动跟
+
+**背景：**
+
+OpenCode 上游的免费模型会轮换（如下架旧模型、上新如 `DeepSeek V4.1 Flash`）。WorkBuddy 里是静态列表，不会自动跟上。
+
+**解法（两部分）：**
+
+1. **Win11 定时同步**：`sync-models-full.mjs` 脚本调用 OC Ferry 源码的 `syncModels`，从 NAS `/health` 取模型列表，自动增删改 `models.json`（只动 OC Ferry 自己的条目）。配合 `setup-sync-task.ps1` 一键创建 Windows 计划任务，每 3 天早上 8 点自动跑。
+
+2. **NAS 定时重启**：OC Ferry 启动时会自动对比本地 OpenCode 版本和官方最新版，旧了就下载替换。所以加个 systemd timer（`oc-ferry-restart.timer`），每周日凌晨 4 点 `systemctl restart oc-ferry`，触发 OpenCode 自动更新检查。
+
+### 5.6 WebUI v2：自研中文控制台
+
+**背景：**
+
+原版 WebUI 只有 142 行，功能简陋。参考 FreeRouter 的布局思路，重构为中文控制台，但配色和细节走自己的风格（海青主题 + 亚托莉背景）。
+
+**功能：**
+
+- **侧边栏导航**：概览 / 免费模型 / 用量 / 日志 / 设置
+- **概览**：运行状态、可用模型数、OpenCode 版本、代理状态卡片；API 接入信息（一键复制 .env / curl / JSON）；快捷操作；模型状态速览
+- **免费模型**：卡片式展示，每个模型标上下文、输出上限、能力标签（推理/图片/工具调用），复制 id 按钮，勾选决定是否导入 WorkBuddy
+- **用量**：探测统计、各模型探测记录表
+- **日志**：探测记录转日志流，支持搜索、按成功/失败过滤，自动滚动——方便排查问题
+- **设置**：API Key 管理、系统代理开关、刷新间隔、背景开关
+
+**部署：** 打包 `src/` 为 tar.gz，NAS 上解压覆盖后 `systemctl restart oc-ferry`，浏览器硬刷新（Ctrl+F5）。
+
+---
+
 ---
 
 ## 6. 参考
