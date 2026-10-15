@@ -572,6 +572,8 @@ This guide is based on the [OC Ferry](https://github.com/HRuiCcc/RuiC-oc-ferry) 
 - Original repo: https://github.com/HRuiCcc/RuiC-oc-ferry
 - Upstream dependency: [OpenCode](https://github.com/sst/opencode)
 
+**Tutorial author**: Written and organized by Muse (Zhenzhen, ATRI), battle-tested by Xie Fei.
+
 ---
 
 *中文版见 [README.md](README.md)*

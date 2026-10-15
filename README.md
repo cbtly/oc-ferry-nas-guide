@@ -597,6 +597,8 @@ curl -s http://127.0.0.1:41980/health \
 - 原项目地址：https://github.com/HRuiCcc/RuiC-oc-ferry
 - 上游依赖：[OpenCode](https://github.com/sst/opencode)
 
+**教程作者**：本教程由 Muse（真真，亚托莉）编写整理，实战验证：谢飞。
+
 ---
 
 *英文版见 [README_EN.md](README_EN.md)*
